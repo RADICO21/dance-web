@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Battle Arena Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: orange;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: block;
+            text-align: left;
+        }
+
+        checkbox {
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #009688;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dance Battle Arena Registration</h1>
+    <form action="connect.php" method="post">
+        <div>
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required/>
+        </div>
+        <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" name="email" required />
+         </div>
+         <div class="form-group"> 
+        <label for="dance-style">Dance Style:</label>
+        <select id="dance_style" class="form-control" id="dance_style" name="dance_style">
+            <option value="Showcase">Showcase</option>
+            <option value="hip-hop">Hip Hop</option>
+            <option value="Afro">Afro</option>
+            <option value="Party">Party</option>
+            <option value="Animation">Animation</option>
+            <option value="House">House</option>
+            <option value="kopala">kopala</option>       
+            <option value="Breakdance">Breakdance</option>
+        </select>
+         </div>
+
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" name="age" min="13" max="99" required/>
+        <span id="age-error" class="error"></span>
+        <div class="form-group">
+         <label for="number">Phone Number</label>
+         <input type="number" class="form-control" id="number" name="number"/>
+         <p>You will receive a Phone call as soon as your registration is received.</p>
+        </div>
+        <div class="form-group"> 
+           <div>
+        <label for="gender">Gender:</label>
+       <label for="male"><input type="radio" name="gender" id="male">Male</label>
+       <label for="female"><input type="radio" name="gender" id="female">Female</label>
+       <label for="others"><input type="radio" name="gender" id="others">others</label>     
+    </div>
+          </div> 
+          <div class="form-group">
+        <label for="agree">I agree to the terms and conditions:</label>
+        <input type="checkbox" class="form-control" id="agree" name="agree" />
+        <span id="agree-error" class="error"></span>
+        <b><p>view terms and conditions.
+            <a href="DBA Terms.html">Click Here</a>
+        </p></b>
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+    <div class="panel-footer text-right">
+       <small>&copy;Designed by Radico</small>
+    </div>
+    
+</body>
+</html>
